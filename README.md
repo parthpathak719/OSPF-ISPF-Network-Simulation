@@ -89,8 +89,8 @@ In GNS3 → **Edit → Preferences → GNS3 VM**, point it to your VMware/Virtua
 ### Step 3 - Import the Topology
 
 ```bash
-git clone https://github.com/<your-username>/ospf-packet-visualizer.git
-cd ospf-packet-visualizer
+git clone https://github.com/<your-username>/OSPF-ISPF-Network-Simulation.git
+cd OSPF-ISPF-Network-Simulation
 ```
 
 Then in GNS3: **File → Open Project** → select `ispf.gns3`
