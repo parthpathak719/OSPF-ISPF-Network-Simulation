@@ -21,9 +21,6 @@ The goal is to show how **iSPF improves convergence time and reduces CPU usage**
 
 ---
 
-
----
-
 ## ⚙️ Tech Stack
 
 - GNS3 (v2.2+)
