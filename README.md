@@ -204,7 +204,7 @@ Collect metrics from the ABR routers (IOSv2 / IOSv7) immediately after.
 
 Increase the OSPF cost on one link from 1 to 200 to test if iSPF is smart enough to skip an irrelevant SPF run.
 
-**Topology A — IOSv2:**
+**Topology A - IOSv2:**
 ```
 IOSv2# conf t
 IOSv2(config)# interface GigabitEthernet0/1
@@ -212,13 +212,13 @@ IOSv2(config-if)# ip ospf cost 200
 IOSv2(config-if)# end
 ```
 
-**Topology B — IOSv7:** same command on the equivalent interface.
+**Topology B - IOSv7:** same command on the equivalent interface.
 
-This is the most revealing scenario — traditional OSPF runs a full Dijkstra anyway, iSPF does not.
+This is the most revealing scenario - traditional OSPF runs a full Dijkstra anyway, iSPF does not.
 
 ---
 
-### Step 7 — Collect Metrics
+### Step 7 - Collect Metrics
 
 Run both commands immediately after triggering each scenario event.
 
