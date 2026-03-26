@@ -9,7 +9,7 @@ The goal is to demonstrate how iSPF reduces CPU overhead and convergence time by
 ## 🚀 Features
 
 - 🔁 Side-by-side simulation of Traditional OSPF and iSPF in GNS3
-- 🖥️ Real Cisco IOSv 15.9 routers — not just Python scripts
+- 🖥️ Real Cisco IOSv 15.9 routers - not just Python scripts
 - 📊 Performance comparison using **SPF Calculation Time** and **CPU Spike %**
 - 🧪 Three real-world failure scenarios: link failure, router down, cost change
 - 🏗️ Multi-area OSPF topology (Area 0, Area 1, Area 2)
@@ -45,12 +45,12 @@ The goal is to demonstrate how iSPF reduces CPU overhead and convergence time by
 |---|---|---|---|
 | Traditional OSPF | Link Failure | 10 ms | ~30% |
 | iSPF | Link Failure | 7 ms | ~20% |
-| Traditional OSPF | Router Down | 7 ms | — |
-| iSPF | Router Down | 4 ms | — |
+| Traditional OSPF | Router Down | 7 ms | - |
+| iSPF | Router Down | 4 ms | - |
 | Traditional OSPF | Link Cost Change | 3 ms | Visible |
 | iSPF | Link Cost Change | 3 ms | **None** |
 
-iSPF outperformed Traditional OSPF in every scenario — most strikingly in the link cost change test, where iSPF detected the change was irrelevant to the best path and **skipped the SPF run entirely**.
+iSPF outperformed Traditional OSPF in every scenario - most strikingly in the link cost change test, where iSPF detected the change was irrelevant to the best path and **skipped the SPF run entirely**.
 
 ---
 
@@ -69,7 +69,7 @@ iSPF outperformed Traditional OSPF in every scenario — most strikingly in the 
 
 ---
 
-### Step 1 — Install GNS3 and the GNS3 VM
+### Step 1 - Install GNS3 and the GNS3 VM
 
 Download both the **GNS3 desktop app** and the **GNS3 VM** from [gns3.com](https://www.gns3.com/software/download).
 
@@ -77,7 +77,7 @@ In GNS3 → **Edit → Preferences → GNS3 VM**, point it to your VMware/Virtua
 
 ---
 
-### Step 2 — Add the Cisco IOSv Image
+### Step 2 - Add the Cisco IOSv Image
 
 1. In GNS3 go to **Edit → Preferences → QEMU VMs → New**
 2. Name it `IOSv` and upload your `vios-adventerprisek9-m.vmdk.SPA.159-3.M8` image
@@ -86,7 +86,7 @@ In GNS3 → **Edit → Preferences → GNS3 VM**, point it to your VMware/Virtua
 
 ---
 
-### Step 3 — Import the Topology
+### Step 3 - Import the Topology
 
 ```bash
 git clone https://github.com/<your-username>/ospf-packet-visualizer.git
@@ -98,7 +98,7 @@ Then in GNS3: **File → Open Project** → select `ispf.gns3`
 The project loads two parallel topologies side by side:
 
 ```
-         [Area 0 — Backbone]
+         [Area 0 - Backbone]
 IOSv1 ──────── IOSv2 ──────── IOSv3
   |         (ABR)          (ABR)|
   | [Area 1]              [Area 2]
@@ -109,11 +109,11 @@ IOSv5 ──────────────────── IOSv4
 
 ---
 
-### Step 4 — Configure the Routers
+### Step 4 - Configure the Routers
 
-> Skip this step if you imported `ispf.gns3` — configs are pre-loaded.
+> Skip this step if you imported `ispf.gns3` - configs are pre-loaded.
 
-**Topology A — Traditional OSPF** (example for IOSv1):
+**Topology A - Traditional OSPF** (example for IOSv1):
 
 ```
 hostname IOSv1
@@ -132,7 +132,7 @@ router ospf 1
  network 10.0.0.0 0.0.0.255 area 1
 ```
 
-**Topology B — iSPF** (same config + one extra line):
+**Topology B - iSPF** (same config + one extra line):
 
 ```
 router ospf 1
@@ -146,7 +146,7 @@ The single `ispf` command is all it takes to enable Incremental SPF on a Cisco r
 
 ---
 
-### Step 5 — Verify Full Convergence
+### Step 5 - Verify Full Convergence
 
 Start all routers and wait ~60 seconds. Confirm all adjacencies are up before running any scenario:
 
@@ -159,7 +159,7 @@ All routers should show **FULL** state in the neighbor table.
 
 ---
 
-### Step 6 — Reset Stats Before Each Test
+### Step 6 - Reset Stats Before Each Test
 
 Run this on the router you'll be measuring **before each scenario**:
 
@@ -174,7 +174,7 @@ IOSv2# clear counters
 
 Shut down the link between two Area 1 routers on **both topologies simultaneously**.
 
-**Topology A (OSPF) — IOSv2:**
+**Topology A (OSPF) - IOSv2:**
 ```
 IOSv2# conf t
 IOSv2(config)# interface GigabitEthernet0/1
@@ -182,7 +182,7 @@ IOSv2(config-if)# shutdown
 IOSv2(config-if)# end
 ```
 
-**Topology B (iSPF) — IOSv7:** run the same `shutdown` command on the equivalent interface.
+**Topology B (iSPF) - IOSv7:** run the same `shutdown` command on the equivalent interface.
 
 Then immediately [collect metrics](#step-7--collect-metrics).
 
