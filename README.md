@@ -54,20 +54,6 @@ iSPF outperformed Traditional OSPF in every scenario — most strikingly in the 
 
 ---
 
-## 📁 Repository Structure
-
-```
-ospf-packet-visualizer/
-├── ispf.gns3                  # GNS3 project file — import this to get started
-├── project-files/             # GNS3 VM topology assets
-├── configs/
-│   ├── topology-a-ospf/       # Startup configs for OSPF routers (IOSv1–5)
-│   └── topology-b-ispf/       # Startup configs for iSPF routers (IOSv6–10)
-└── README.md
-```
-
----
-
 ## ⚙️ Simulation Walkthrough
 
 ### Prerequisites
@@ -250,25 +236,3 @@ Record the **`Total`** time in milliseconds from the most recent SPF entry:
 ```
   Area 1: SPF algorithm executed 3 times
    Last execution took 0.007 seconds
-```
-
----
-
-## 📚 References
-
-1. Jagtap et al., "Performance Evaluation of RIP and OSPF," *IJFMR*, 2025
-2. Kumar et al., "OSPF routing protocol simulation," *Academia.edu*, 2022
-3. Smith & Doe, "Incremental Approximate Single-Source Shortest Paths," *arXiv:2502.08125*, 2025
-
-Full reference list available in the [project report](./OSPF_Packet_Visualizer_Team21_report.pdf).
-
----
-
-## 👥 Team
-
-| Name | Roll No. |
-|---|---|
-| Pratyush Swain | BL.EN.U4CSE23043 |
-| Parth Pathak | BL.EN.U4CSE23036 |
-
-*Advisor: Dr. Thangam S. — Amrita School of Computing, Bengaluru*
