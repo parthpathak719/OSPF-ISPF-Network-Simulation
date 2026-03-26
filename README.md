@@ -1,6 +1,6 @@
 # 🌐 OSPF Packet Visualizer (iSPF vs Traditional OSPF)
 
-This project demonstrates and compares **traditional OSPF (Shortest Path First)** with **Incremental Shortest Path First (iSPF)** using a realistic network simulation.
+This project demonstrates and compares **traditional OSPF (Open Shortest Path First)** with **iSPF (Incremental Shortest Path First)** using a realistic network simulation.
 
 The goal is to show how **iSPF improves convergence time and reduces CPU usage** by updating only affected parts of the network instead of recomputing everything.
 
