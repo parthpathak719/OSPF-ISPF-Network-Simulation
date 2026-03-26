@@ -18,7 +18,7 @@ The goal is to demonstrate how iSPF reduces CPU overhead and convergence time by
 
 ## 🗂️ Topology
 
-**GNS3 Network — 5 Routers, 3 Areas**
+**GNS3 Network - 5 Routers, 3 Areas**
 
 | Parameter | Value |
 |---|---|
