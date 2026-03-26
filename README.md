@@ -1,4 +1,4 @@
-# 🌐 OSPF Packet Visualizer — iSPF vs Traditional OSPF
+# 🌐 OSPF Packet Visualizer - iSPF vs Traditional OSPF
 
 This project simulates and compares **Traditional OSPF** (full Dijkstra recomputation) and **Incremental Shortest Path First (iSPF)** using real Cisco IOSv routers in GNS3.
 
