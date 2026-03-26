@@ -56,11 +56,7 @@ The goal is to show how **iSPF improves convergence time and reduces CPU usage**
 
 - GNS3 project file (`.gns3`)
 - Router configurations
-- Simulation results (CPU graphs, logs)
-
-For detailed explanation refer:
-- 📄 Report: :contentReference[oaicite:0]{index=0}  
-- 📊 Presentation: :contentReference[oaicite:1]{index=1}  
+- Simulation results (CPU graphs, logs) 
 
 ---
 
