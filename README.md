@@ -52,7 +52,11 @@ The goal is to demonstrate how iSPF reduces CPU overhead and convergence time by
 | Traditional OSPF | Link Cost Change | 3 ms | Visible |
 | iSPF | Link Cost Change | 3 ms | **None** |
 
+### Link Failure
+
 <img src="results/link%20failure/ospf_linkfailure.jpg" width="400"/> <img src="results/link%20failure/ispf_linkfailure.jpg" width="400"/>
+
+### Link Cost Change
 
 <img src="results/link%20cost%20change/ospf_linkcost.jpg" width="400"/> <img src="results/link%20cost%20change/ispf_linkcost.jpg" width="400"/>
 
