@@ -54,7 +54,7 @@ The goal is to demonstrate how iSPF reduces CPU overhead and convergence time by
 
 ### Link Failure
 
-<img src="results/link%20failure/ospf_linkfailure.jpg" width="400"/><br>**Ospf** <img src="results/link%20failure/ispf_linkfailure.jpg" width="400"/><br>iSPF
+<img src="results/link%20failure/ospf_linkfailure.jpg" width="400"/> <img src="results/link%20failure/ispf_linkfailure.jpg" width="400"/>
 
 ### Link Cost Change
 
