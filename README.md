@@ -52,9 +52,9 @@ The goal is to demonstrate how iSPF reduces CPU overhead and convergence time by
 | Traditional OSPF | Link Cost Change | 3 ms | Visible |
 | iSPF | Link Cost Change | 3 ms | **None** |
 
-![OSPF Link Failure](results/link%20failure/ospf_linkfailure.jpg) | ![iSPF Link Failure](results/link%20failure/ispf_linkfailure.jpg)
+<img src="results/link%20failure/ospf_linkfailure.jpg" width="400"/> <img src="results/link%20failure/ispf_linkfailure.jpg" width="400"/>
 
-![OSPF Link Cost](results/link%20cost%20change/ospf_linkcost.jpg) | ![iSPF Link Cost](results/link%20cost%20change/ispf_linkcost.jpg)
+<img src="results/link%20cost%20change/ospf_linkcost.jpg" width="400"/> <img src="results/link%20cost%20change/ispf_linkcost.jpg" width="400"/>
 
 iSPF outperformed Traditional OSPF in every scenario - most strikingly in the link cost change test, where iSPF detected the change was irrelevant to the best path and **skipped the SPF run entirely**.
 
